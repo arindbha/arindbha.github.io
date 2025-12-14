@@ -6,8 +6,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const modal = document.getElementById('experienceModal');
     const modalClose = document.getElementById('modalClose');
+    const modalIcon = document.getElementById('modalIcon');
     const modalCompanyName = document.getElementById('modalCompanyName');
     const modalCompanyDesc = document.getElementById('modalCompanyDesc');
+    const modalTenureText = document.getElementById('modalTenureText');
     const modalBody = document.getElementById('modalBody');
     const experienceToggles = document.querySelectorAll('.experience-toggle');
 
@@ -18,16 +20,33 @@ document.addEventListener('DOMContentLoaded', function () {
             const experienceDetails = document.getElementById(targetId);
 
             if (experienceDetails) {
-                // Extract company name from button text
-                const companyName = this.textContent.trim();
+                // Extract company logo from button
+                const logoElement = this.querySelector('.company-logo');
+                const logoSrc = this.getAttribute('data-logo') || (logoElement ? logoElement.src : '');
+
+                // Extract company name and tenure from button
+                const companyNameElement = this.querySelector('.company-name');
+                const companyTenureElement = this.querySelector('.company-tenure');
+
+                const companyName = companyNameElement ? companyNameElement.textContent.trim() : this.textContent.trim();
+                const tenure = companyTenureElement ? companyTenureElement.textContent.trim() : '';
 
                 // Get company description and content
                 const companyDesc = experienceDetails.querySelector('p');
                 const contentList = experienceDetails.querySelector('ul');
 
+                // Update modal logo
+                if (logoSrc) {
+                    modalIcon.innerHTML = `<img src="${logoSrc}" alt="${companyName}">`;
+                } else {
+                    modalIcon.innerHTML = `<i class="fas fa-building"></i>`;
+                }
+
                 // Populate modal
                 modalCompanyName.textContent = companyName;
                 modalCompanyDesc.textContent = companyDesc ? companyDesc.textContent : '';
+                modalTenureText.textContent = tenure;
+
                 modalBody.innerHTML = contentList ? contentList.outerHTML : '';
 
                 // Show modal

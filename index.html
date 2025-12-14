@@ -49,8 +49,8 @@
                 <h3 class="nav-title">Experience</h3>
 
                 <div class="experience-item">
-                    <button class="experience-toggle" data-target="glt">
-                        <i class="fas fa-building company-icon"></i>
+                    <button class="experience-toggle" data-target="glt" data-logo="logos/glt-techserv-logo.png">
+                        <img src="logos/glt-techserv-logo.png" alt="GLT Tech-Serv" class="company-logo">
                         <div class="company-info">
                             <span class="company-name">GLT Tech-Serv Private Limited</span>
                             <span class="company-tenure">12/2023 - Present</span>
@@ -85,10 +85,10 @@
                 </div>
 
                 <div class="experience-item">
-                    <button class="experience-toggle" data-target="verse">
-                        <i class="fas fa-newspaper company-icon"></i>
+                    <button class="experience-toggle" data-target="verse" data-logo="logos/verse-logo.png">
+                        <img src="logos/verse-logo.png" alt="VER SE' Innovation Pvt. Ltd." class="company-logo">
                         <div class="company-info">
-                            <span class="company-name">VER SE' Innovation</span>
+                            <span class="company-name">VER SE' Innovation Pvt. Ltd.</span>
                             <span class="company-tenure">02/2022 - 11/2023</span>
                         </div>
                     </button>
@@ -110,8 +110,8 @@
                 </div>
 
                 <div class="experience-item">
-                    <button class="experience-toggle" data-target="walmart">
-                        <i class="fas fa-shopping-cart company-icon"></i>
+                    <button class="experience-toggle" data-target="walmart" data-logo="logos/walmart-logo.png">
+                        <img src="logos/walmart-logo.png" alt="Walmart Global Tech" class="company-logo">
                         <div class="company-info">
                             <span class="company-name">Walmart Global Tech</span>
                             <span class="company-tenure">01/2021 - 02/2022</span>
@@ -135,8 +135,8 @@
                 </div>
 
                 <div class="experience-item">
-                    <button class="experience-toggle" data-target="deloitte">
-                        <i class="fas fa-briefcase company-icon"></i>
+                    <button class="experience-toggle" data-target="deloitte" data-logo="logos/deloitte-logo.png">
+                        <img src="logos/deloitte-logo.png" alt="Deloitte Consulting" class="company-logo">
                         <div class="company-info">
                             <span class="company-name">Deloitte Consulting</span>
                             <span class="company-tenure">09/2019 - 01/2021</span>
@@ -155,8 +155,8 @@
                 </div>
 
                 <div class="experience-item">
-                    <button class="experience-toggle" data-target="accenture">
-                        <i class="fas fa-chart-line company-icon"></i>
+                    <button class="experience-toggle" data-target="accenture" data-logo="logos/accenture-logo.png">
+                        <img src="logos/accenture-logo.png" alt="Accenture" class="company-logo">
                         <div class="company-info">
                             <span class="company-name">Accenture</span>
                             <span class="company-tenure">05/2018 - 09/2019</span>
@@ -174,10 +174,10 @@
                 </div>
 
                 <div class="experience-item">
-                    <button class="experience-toggle" data-target="ibm">
-                        <i class="fas fa-cloud company-icon"></i>
+                    <button class="experience-toggle" data-target="ibm" data-logo="logos/ibm-logo.png">
+                        <img src="logos/ibm-logo.png" alt="IBM India" class="company-logo">
                         <div class="company-info">
-                            <span class="company-name">IBM India</span>
+                            <span class="company-name">IBM India Pvt. Ltd.</span>
                             <span class="company-tenure">08/2016 - 05/2018</span>
                         </div>
                     </button>
@@ -406,9 +406,16 @@
     <div class="modal-overlay" id="experienceModal">
         <div class="modal-content">
             <div class="modal-header">
+                <div class="modal-icon" id="modalIcon">
+                    <i class="fas fa-building"></i>
+                </div>
                 <div class="modal-title">
                     <h2 id="modalCompanyName"></h2>
                     <p class="company-desc" id="modalCompanyDesc"></p>
+                    <div class="modal-tenure" id="modalTenure">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span id="modalTenureText"></span>
+                    </div>
                 </div>
                 <button class="modal-close" id="modalClose">&times;</button>
             </div>
