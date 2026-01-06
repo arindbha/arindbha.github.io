@@ -224,13 +224,13 @@ body {
 
 .education-school {
     font-size: 0.85rem;
-    color: var(--text-secondary);
+    color: #f1f5f9;
     margin-bottom: var(--spacing-xs);
 }
 
 .education-year {
     font-size: 0.8rem;
-    color: var(--text-muted);
+    color: #94a3b8;
 }
 
 /* ===========================
